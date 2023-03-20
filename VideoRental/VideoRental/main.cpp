@@ -14,6 +14,8 @@ int main()
     Movie newRelease2{ "신작 2",Movie::NEW_RELEASE };
     Movie children1{ "어린이 1", Movie::CHILDRENS };
     Movie children2{ "어린이 2", Movie::CHILDRENS };
+    Movie newGenre1{ "새 장르1", Movie::EXAMPLE_GENRE };
+    Movie newGenre2{ "새 장르2", Movie::EXAMPLE_GENRE };
     Customer customer{ "고객" };
 
     //parameter: Movie(Movie title, Price code), Rental days
@@ -25,6 +27,8 @@ int main()
     customer.addRental({ newRelease2, 2 });
     customer.addRental({ children1, 3 });
     customer.addRental({ children2, 4 });
+    customer.addRental({ newGenre1, 2 });
+    customer.addRental({ newGenre2, 4 });
 
     cout << customer.statement() << endl;
 
