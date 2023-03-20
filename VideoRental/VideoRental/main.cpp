@@ -6,6 +6,8 @@ using namespace std;
 
 int main()
 {
+    //price code: REGULAR - 0 / NEW_RELEASE - 1 / CHILDRENS - 2 
+    //(No price, Only code for using switch/case)
     Movie regular1{ "일반 1", Movie::REGULAR };
     Movie regular2{ "일반 2", Movie::REGULAR };
     Movie newRelease1{ "신작 1", Movie::NEW_RELEASE };
@@ -14,6 +16,9 @@ int main()
     Movie children2{ "어린이 2", Movie::CHILDRENS };
     Customer customer{ "고객" };
 
+    //parameter: Movie(Movie title, Price code), Rental days
+    //addRental: Add parameters to Rental unit vector (customerRentals)
+    //(Rental Class -> Movie(Movie title, Price code), Rental days)
     customer.addRental({ regular1, 2 });
     customer.addRental({ regular2, 3 });
     customer.addRental({ newRelease1, 1 });

@@ -3,7 +3,7 @@
 #define MOVIE_H
 #include <string>
 
-class Movie {
+class Movie {						//Movie title, Price code
 public:
   static const int CHILDRENS   = 2;
   static const int REGULAR     = 0;
@@ -16,8 +16,8 @@ public:
   std::string getTitle() const;
 
 private:
-  std::string movieTitle;
-  int moviePriceCode;
+  std::string movieTitle;		
+  int moviePriceCode;			
 };
 
 inline Movie::Movie( const std::string& title, int priceCode ): 

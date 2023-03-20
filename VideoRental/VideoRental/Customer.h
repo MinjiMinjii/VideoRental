@@ -22,6 +22,7 @@ public:
 private:
   std::string customerName;
   std::vector< Rental > customerRentals;
+  //Rental : Movie title, Price code, Rental Days
 
 };
 
