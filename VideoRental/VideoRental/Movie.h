@@ -5,10 +5,17 @@
 
 class Movie {						//Movie title, Price code
 public:
-  static const int REGULAR     = 0;
-  static const int NEW_RELEASE = 1;
-  static const int CHILDRENS   = 2;
-  static const int EXAMPLE_GENRE = 3;
+  //static const int REGULAR     = 0;
+  //static const int NEW_RELEASE = 1;
+  //static const int CHILDRENS   = 2;
+  //static const int EXAMPLE_GENRE = 3;
+	enum Genre
+	{
+		REGULAR,
+		NEW_RELEASE,
+		CHILDRENS,
+		EXAMPLE_GENRE
+	};
 
   Movie( const std::string& title, int priceCode = REGULAR );
 
@@ -21,15 +28,15 @@ private:
   int moviePriceCode;			
 };
 
-inline Movie::Movie( const std::string& title, int priceCode ): 
-  movieTitle( title ),
-  moviePriceCode( priceCode )
-{}
-
-inline int Movie::getPriceCode() const { return moviePriceCode; }
-
-inline void Movie::setPriceCode( int arg ) { moviePriceCode = arg; }
-
-inline std::string Movie::getTitle() const { return movieTitle; }
+//inline Movie::Movie( const std::string& title, int priceCode ): 
+//  movieTitle( title ),
+//  moviePriceCode( priceCode )
+//{}
+//
+//inline int Movie::getPriceCode() const { return moviePriceCode; }
+//
+//inline void Movie::setPriceCode( int arg ) { moviePriceCode = arg; }
+//
+//inline std::string Movie::getTitle() const { return movieTitle; }
 
 #endif // MOVIE_H

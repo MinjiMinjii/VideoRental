@@ -15,12 +15,12 @@ private:
   int nDaysRented;
 };
 
-inline Rental::Rental( const Movie& movie, int daysRented ):
-  rentedMovie( movie ),
-  nDaysRented( daysRented ) {}
-
-inline int Rental::getDaysRented() const { return nDaysRented; }
-
-inline const Movie& Rental::getMovie() const { return rentedMovie; }
+//inline Rental::Rental( const Movie& movie, int daysRented ):
+//  rentedMovie( movie ),
+//  nDaysRented( daysRented ) {}
+//
+//inline int Rental::getDaysRented() const { return nDaysRented; }
+//
+//inline const Movie& Rental::getMovie() const { return rentedMovie; }
 
 #endif // RENTAL_H

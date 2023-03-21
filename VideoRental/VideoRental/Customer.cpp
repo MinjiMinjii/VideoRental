@@ -6,6 +6,15 @@
 using std::ostringstream;
 using std::vector;
 
+Customer::Customer() {}
+
+Customer::Customer(const std::string& name) :
+    customerName(name) {}
+
+void Customer::addRental(const Rental& arg) { customerRentals.push_back(arg); }
+
+std::string Customer::getName() const { return customerName; }
+
 std::string Customer::statement()
 {
   double totalAmount = 0.;
@@ -32,26 +41,26 @@ std::string Customer::statement()
       case Movie::REGULAR:                          //If REGULAR?
         thisAmount += 2.;                           //Add 2
         if ( each.getDaysRented() > 2 )             //If more than 3 days? Add 1.5/day
-          thisAmount += ( each.getDaysRented() - 2 ) * 1.5 ; 
+          thisAmount += ( (double)each.getDaysRented() - 2 ) * 1.5 ; 
         strGenre = "REGULAR";
         break;
 
       case Movie::NEW_RELEASE:                      //If NEW_RELEASE?
-        thisAmount += each.getDaysRented() * 3;     //Add 3/day
+        thisAmount += (double)each.getDaysRented() * 3;     //Add 3/day
         strGenre = "NEW_RELEASE";
         break;
 
       case Movie::CHILDRENS:                        //If CHILDERN?
         thisAmount += 1.5;                          //Add 1.5
         if ( each.getDaysRented() > 3 )             //If more than 4 days? Add 1.5/day
-          thisAmount += ( each.getDaysRented() - 3 ) * 1.5; 
+          thisAmount += ((double)each.getDaysRented() - 3 ) * 1.5;
         strGenre = "CHILDREN";
         break;
 
       case Movie::EXAMPLE_GENRE:                    //If EXAMPLE_GENRE?
           thisAmount += 4;                          //Add 4
           if (each.getDaysRented() > 2)             //If more than 3 days? Add 4/day
-              thisAmount += (each.getDaysRented() - 2) * 4; 
+              thisAmount += ((double)each.getDaysRented() - 2) * 4;
           strGenre = "EXAMPLE_GENRE";
           break; 
     }

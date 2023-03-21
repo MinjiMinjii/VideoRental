@@ -27,13 +27,13 @@ private:
 };
 
 
-inline Customer::Customer() {}
-
-inline Customer::Customer( const std::string& name ): 
-  customerName( name ) {}
-
-inline void Customer::addRental( const Rental& arg ) { customerRentals.push_back( arg ); }
-
-inline std::string Customer::getName() const { return customerName; }
+//inline Customer::Customer() {}
+//
+//inline Customer::Customer( const std::string& name ): 
+//  customerName( name ) {}
+//
+//inline void Customer::addRental( const Rental& arg ) { customerRentals.push_back( arg ); }
+//
+//inline std::string Customer::getName() const { return customerName; }
 
 #endif // CUSTOMER_HH
